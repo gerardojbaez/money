@@ -42,7 +42,7 @@ class Money
 
 		if($this->currency->getSymbol() === null)
 			$format .= ' '.$this->currency->getCode();
-		elseif ($this->currency->getSymbolPlacement() == 'front')
+		elseif ($this->currency->getSymbolPlacement() == 'before')
 			$format = $this->currency->getSymbol().$format;
 		else
 			$format .= $this->currency->getSymbol();
