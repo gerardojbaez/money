@@ -32,6 +32,16 @@ class Money
 	}
 
 	/**
+	 * Print formated amount.
+	 *
+	 * @return string
+	 */
+	public function __toString()
+	{
+		return $this->format();
+	}
+
+	/**
 	 * Format amount to currency equivalent string.
 	 *
 	 * @return string

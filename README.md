@@ -76,7 +76,10 @@ echo moneyFormat(1000000, 'INR'); // RESULT: र10,00,000
 <?php
 
 $money = new Gerardojbaez\Money\Money(1000000, 'INR');
-ehco $money->format(); // RESULT: र10,00,000
+
+echo $money->format(); // RESULT: र10,00,000
+echo $money; // The same as using $money->format()
+
 echo $money->amount(); // RESULT: 10,00,000
 ```
 
