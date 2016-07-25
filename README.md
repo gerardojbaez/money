@@ -21,7 +21,7 @@ moneyFormat(12.99, 'USD'); // RESULT: $12.99
 	- [Formatting Using Helper Function](#formatting-using-helper-function)
 	- [Formatting Using Class](#formatting-using-class)
 	- [Get Currency Information](#get-currency-information)
-	- [Get All Supported Currencies](##get-all-supported-currencies)
+	- [Get All Supported Currencies](#get-all-supported-currencies)
 - [License](#license)
 
 ## Installation
