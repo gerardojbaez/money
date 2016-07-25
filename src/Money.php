@@ -38,7 +38,7 @@ class Money
 	 */
 	public function format()
 	{
-		$format = $this->formatAmount();
+		$format = $this->amount();
 
 		if($this->currency->getSymbol() === null)
 			$format .= ' '.$this->currency->getCode();
@@ -51,11 +51,11 @@ class Money
 	}
 
 	/**
-	 * Format amount only to currency equivalent.
+	 * Get amount formatted to currency.
 	 *
 	 * @return mixed
 	 */
-	public function formatAmount()
+	public function amount()
 	{
 		// Indian Rupee use special format
 		if ($this->currency->getCode() == 'INR')
