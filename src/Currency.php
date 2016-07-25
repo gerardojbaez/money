@@ -63,7 +63,7 @@ class Currency
 	 *
 	 * @var array
 	 */
-	protected $currencies = [
+	private static $currencies = [
 		'ARS' => ['code' => 'ARS', 'title' => 'Argentine Peso', 'symbol' => null, 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
 		'AMD' => ['code' => 'AMD', 'title' => 'Armenian Dram', 'symbol' => null, 'precision' => 2, 'thousandSeparator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
 		'AWG' => ['code' => 'AWG', 'title' => 'Aruban Guilder', 'symbol' => null, 'precision' => 2, 'thousandSeparator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
@@ -254,7 +254,7 @@ class Currency
 	 */
 	public static function getAllCurrencies()
 	{
-		return $this->currencies;
+		return self::$currencies;
 	}
 
 	/**
@@ -265,7 +265,7 @@ class Currency
 	 */
 	protected function getCurrency($code)
 	{
-		return $this->currencies[$code];
+		return self::$currencies[$code];
 	}
 
 	/**
@@ -276,6 +276,6 @@ class Currency
 	 */
 	protected function hasCurrency($code)
 	{
-		return isset($this->currencies[$code]);
+		return isset(self::$currencies[$code]);
 	}
 }
