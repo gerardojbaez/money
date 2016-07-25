@@ -87,7 +87,7 @@ class Money
 		// Return western format
 		return number_format(
 			$this->amount,
-			$this->currency->getPrecission(),
+			$this->currency->getPrecision(),
 			$this->currency->getThousandSeparator(),
 			$this->currency->getDecimalSeparator()
 		);
