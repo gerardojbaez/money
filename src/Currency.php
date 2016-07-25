@@ -269,7 +269,7 @@ class Currency
 	}
 
 	/**
-	 * Check currency existense (within the class)
+	 * Check currency existence (within the class)
 	 *
 	 * @access protected
 	 * @return bool
