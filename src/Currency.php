@@ -248,6 +248,16 @@ class Currency
 	}
 
 	/**
+	 * Get all currencies.
+	 *
+	 * @return array
+	 */
+	public static function getAllCurrencies()
+	{
+		return $this->currencies;
+	}
+
+	/**
 	 * Get currency.
 	 *
 	 * @access protected
