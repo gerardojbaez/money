@@ -98,8 +98,8 @@ class Money
 		return number_format(
 			$this->amount,
 			$this->currency->getPrecision(),
-			$this->currency->getThousandSeparator(),
-			$this->currency->getDecimalSeparator()
+			$this->currency->getDecimalSeparator(),
+			$this->currency->getThousandSeparator()
 		);
 	}
 }
