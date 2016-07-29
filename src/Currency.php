@@ -149,7 +149,7 @@ class Currency
 		'TOP' => ['code' => 'TOP', 'title' => 'Tonga, Paanga', 'symbol' => null, 'precision' => 2, 'thousandSeparator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
 		'AED' => ['code' => 'AED', 'title' => 'UAE Dirham', 'symbol' => null, 'precision' => 2, 'thousandSeparator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
 		'UAH' => ['code' => 'UAH', 'title' => 'Ukraine, Hryvnia', 'symbol' => null, 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => ' ', 'symbolPlacement' => 'before'],
-		'USD' => ['code' => 'USD', 'title' => 'US Dollar', 'symbol' => '$', 'precision' => 2, 'thousandSeparator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
+		'USD' => ['code' => 'USD', 'title' => 'US Dollar', 'symbol' => '$', 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
 		'VUV' => ['code' => 'VUV', 'title' => 'Vanuatu, Vatu', 'symbol' => null, 'precision' => 0, 'thousandSeparator' => '', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
 		'VEF' => ['code' => 'VEF', 'title' => 'Venezuela Bolivares Fuertes', 'symbol' => null, 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
 		'VEB' => ['code' => 'VEB', 'title' => 'Venezuela, Bolivar', 'symbol' => null, 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
