@@ -72,13 +72,13 @@ class Currency
 	 * @var array
 	 */
 	private static $currencies = [
-		'ARS' => ['code' => 'ARS', 'title' => 'Argentine Peso', 'symbol' => 'AR$', 'precision' => 2, 'thousand Separator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
-		'AMD' => ['code' => 'AMD', 'title' => 'Armenian Dram', 'symbol' => '&#14l23;', 'precision' => 2, 'thousand Separator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
-		'AWG' => ['code' => 'AWG', 'title' => 'Aruban Guilder', 'symbol' => 'Afl. ', 'precision' => 2, 'thousand Separator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
-		'AUD' => ['code' => 'AUD', 'title' => 'Australian Dollar', 'symbol' => 'AU$', 'precision' => 2, 'thousand Separator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
-		'BSD' => ['code' => 'BSD', 'title' => 'Bahamian Dollar', 'symbol' => 'B$', 'precision' => 2, 'thousand Separator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
-		'BHD' => ['code' => 'BHD', 'title' => 'Bahraini Dinar', 'symbol' => null, 'precision' => 3, 'thousand Separator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
-		'BDT' => ['code' => 'BDT', 'title' => 'Bangladesh, Taka', 'symbol' => null, 'precision' => 2, 'thousand Separator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
+		'ARS' => ['code' => 'ARS', 'title' => 'Argentine Peso', 'symbol' => 'AR$', 'precision' => 2, 'thousandSeparator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
+		'AMD' => ['code' => 'AMD', 'title' => 'Armenian Dram', 'symbol' => '&#14l23;', 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
+		'AWG' => ['code' => 'AWG', 'title' => 'Aruban Guilder', 'symbol' => 'Afl. ', 'precision' => 2, 'thousandSeparator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
+		'AUD' => ['code' => 'AUD', 'title' => 'Australian Dollar', 'symbol' => 'AU$', 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
+		'BSD' => ['code' => 'BSD', 'title' => 'Bahamian Dollar', 'symbol' => 'B$', 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
+		'BHD' => ['code' => 'BHD', 'title' => 'Bahraini Dinar', 'symbol' => null, 'precision' => 3, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
+		'BDT' => ['code' => 'BDT', 'title' => 'Bangladesh, Taka', 'symbol' => null, 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
 		'BZD' => ['code' => 'BZD', 'title' => 'Belize Dollar', 'symbol' => 'BZ$', 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
 		'BMD' => ['code' => 'BMD', 'title' => 'Bermudian Dollar', 'symbol' => 'BD$', 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
 		'BOB' => ['code' => 'BOB', 'title' => 'Bolivia, Boliviano', 'symbol' => 'Bs', 'precision' => 2, 'thousandSeparator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
