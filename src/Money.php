@@ -102,4 +102,14 @@ class Money
 			$this->currency->getThousandSeparator()
 		);
 	}
+
+	/**
+	 * Get amount formatted decimal.
+	 *
+	 * @return string decimal
+	 */
+	public function toDecimal()
+	{
+		return (string)$this->amount;
+	}
 }
