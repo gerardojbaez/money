@@ -76,8 +76,8 @@ class Money
 			// Extract decimals from amount
 			if (($pos = strpos($amount, ".")) !== false)
 			{
-			    $decimals = substr(round(substr($amount, $pos), 2), 1);
-			    $amount = substr($amount,0,$pos);
+				$decimals = substr(round(substr($amount, $pos), 2), 1);
+				$amount = substr($amount,0,$pos);
 			}
 
 			// Extract last 3 from amount
@@ -87,8 +87,8 @@ class Money
 			// Apply digits 2 by 2
 			while(strlen($amount) > 0)
 			{
-			    $result = substr($amount,-2).",".$result;
-			    $amount = substr($amount,0,-2);
+				$result = substr($amount,-2).",".$result;
+				$amount = substr($amount,0,-2);
 			}
 
 			return $result.$decimals;
@@ -112,4 +112,50 @@ class Money
 	{
 		return (string)$this->amount;
 	}
+
+	/**
+	 * parses locale formatted money string
+	 * to object of class Money
+	 *
+	 * @param  string          $str      Locale Formatted Money String
+	 * @param  Currency|string $currency default 'USD'
+	 * @return Money           $money    Decimal String
+	 */
+	public static function parse(string $str, $currency = 'USD')
+	{
+		// get currency object
+		$currency = (is_string($currency) ? new Currency($currency) : $currency);
+
+		// remove HTML encoded characters: http://stackoverflow.com/a/657670
+		// special characters that arrive like &0234;
+		$str = preg_replace("/&#?[a-z0-9]{2,8};/i",'',$str);
+
+		// remove all leading non numbers
+		$str = preg_replace('/^[^0-9]*/','',$str);
+
+		// remove all thousands separators
+		if (strlen($currency->getThousandSeparator()))
+		{
+			$str = str_replace($currency->getThousandSeparator(),'',$str);
+		}
+
+		if (strlen($currency->getDecimalSeparator()))
+		{
+			// make decimal separator regex safe
+			$char = preg_quote($currency->getDecimalSeparator());
+			// remove all other characters
+			$str = preg_replace('/[^'.$char.'\d]/', "", $str);
+			// convert all decimal seperators to PHP/bcmath safe decimal '.'
+			$str = preg_replace('/'.$char.'/', ".", $str);
+		}
+		else
+		{
+			// for currencies that do not have decimal points
+			// remove all other characters
+			$str = preg_replace('/[^\d]/', "", $str);
+		}
+
+		return new Money($str, $currency);
+	}
+
 }
