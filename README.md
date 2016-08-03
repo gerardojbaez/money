@@ -20,6 +20,7 @@ moneyFormat(12.99, 'USD'); // RESULT: $12.99
 	- [Currencies Supported](#currencies-supported)
 	- [Formatting Using Helper Function](#formatting-using-helper-function)
 	- [Formatting Using Class](#formatting-using-class)
+	- [Parse String](#parse-string)
 	- [Get Currency Information](#get-currency-information)
 	- [Get All Supported Currencies](#get-all-supported-currencies)
 - [License](#license)
@@ -81,6 +82,14 @@ echo $money->format(); // RESULT: र10,00,000
 echo $money; // The same as using $money->format()
 
 echo $money->amount(); // RESULT: 10,00,000
+```
+
+### Parse String
+
+```php
+<?php
+
+echo Money::parse('$1,200.90', 'USD')->toDecimal(); // RESULT: 1200.9
 ```
 
 ### Get Currency Information
