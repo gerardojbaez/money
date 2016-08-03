@@ -121,7 +121,7 @@ class Money
 	 * @param  Currency|string $currency default 'USD'
 	 * @return Money           $money    Decimal String
 	 */
-	public static function parse(string $str, $currency = 'USD')
+	public static function parse($str, $currency = 'USD')
 	{
 		// get currency object
 		$currency = (is_string($currency) ? new Currency($currency) : $currency);
