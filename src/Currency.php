@@ -73,7 +73,7 @@ class Currency
 	 */
 	private static $currencies = [
 		'ARS' => ['code' => 'ARS', 'title' => 'Argentine Peso', 'symbol' => 'AR$', 'precision' => 2, 'thousandSeparator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
-		'AMD' => ['code' => 'AMD', 'title' => 'Armenian Dram', 'symbol' => '&#14l23;', 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
+		'AMD' => ['code' => 'AMD', 'title' => 'Armenian Dram', 'symbol' => 'Դ', 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
 		'AWG' => ['code' => 'AWG', 'title' => 'Aruban Guilder', 'symbol' => 'Afl. ', 'precision' => 2, 'thousandSeparator' => '.', 'decimalSeparator' => ',', 'symbolPlacement' => 'before'],
 		'AUD' => ['code' => 'AUD', 'title' => 'Australian Dollar', 'symbol' => 'AU$', 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
 		'BSD' => ['code' => 'BSD', 'title' => 'Bahamian Dollar', 'symbol' => 'B$', 'precision' => 2, 'thousandSeparator' => ',', 'decimalSeparator' => '.', 'symbolPlacement' => 'before'],
