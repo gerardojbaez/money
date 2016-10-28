@@ -43,11 +43,15 @@ class Money
 
 	/**
 	 * Format amount to currency equivalent string.
-	 *
+	 * @param integer $precision
 	 * @return string
 	 */
-	public function format()
+	public function format($precision = null)
 	{
+        if ($precision !== null) {
+            $this->currency->setPrecision($precision);
+        }
+
 		$format = $this->amount();
 
 		if($this->currency->getSymbol() === null)

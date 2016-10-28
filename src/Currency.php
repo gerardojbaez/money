@@ -215,6 +215,14 @@ class Currency
 		return $this->precision;
 	}
 
+    /**
+     * @param integer $precision
+     */
+	public function setPrecision($precision)
+    {
+        $this->precision = $precision;
+    }
+
 	/**
 	 * Get currency title.
 	 *
