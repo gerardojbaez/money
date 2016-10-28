@@ -2,4 +2,7 @@
 
 namespace Gerardojbaez\Money\Exceptions;
 
-class CurrencyException extends \Exception { }
+class CurrencyException extends \Exception
+{
+ 
+}
