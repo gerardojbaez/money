@@ -22,13 +22,18 @@ class Money
      * Create new Money Instance
      *
      * @param float|int
-     * @param string Currency (Defaulted to USD)
+     * @param mixed $currency
      * @return void
      */
     function __construct($amount, $currency = 'USD')
     {
         $this->amount = (float)$amount;
-        $this->currency = (is_string($currency) ? new Currency($currency) : $currency);
+
+        if (is_string($currency)) {
+            $this->currency = (is_string($currency) ? new Currency($currency) : $currency);
+        } elseif ($currency instanceof Currency) {
+            $this->currency = $currency;
+        }
     }
 
     /**
@@ -46,12 +51,8 @@ class Money
      * @param integer $precision
      * @return string
      */
-    public function format($precision = null)
+    public function format()
     {
-        if ($precision !== null) {
-            $this->currency->setPrecision($precision);
-        }
-
         $format = $this->amount();
 
         if ($this->currency->getSymbol() === null) {

@@ -218,10 +218,13 @@ class Currency
 
     /**
      * @param integer $precision
+     * @return $this
      */
     public function setPrecision($precision)
     {
         $this->precision = $precision;
+
+        return $this;
     }
 
     /**
@@ -245,6 +248,17 @@ class Currency
     }
 
     /**
+     * @param string $separator
+     * @return $this
+     */
+    public function setThousandSeparator($separator)
+    {
+        $this->thousandSeparator = $separator;
+
+        return $this;
+    }
+
+    /**
      * Get currency decimal separator.
      *
      * @return string
@@ -255,6 +269,17 @@ class Currency
     }
 
     /**
+     * @param string $separator
+     * @return $this
+     */
+    public function setDecimalSeparator($separator)
+    {
+        $this->decimalSeparator = $separator;
+
+        return $this;
+    }
+
+    /**
      * Get currency symbol placement.
      *
      * @return string
@@ -262,6 +287,17 @@ class Currency
     public function getSymbolPlacement()
     {
         return $this->symbolPlacement;
+    }
+
+    /**
+     * @param string $placement [before|after]
+     * @return $this
+     */
+    public function setSymbolPlacement($placement)
+    {
+        $this->symbolPlacement = $placement;
+
+        return $this;
     }
 
     /**

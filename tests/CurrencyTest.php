@@ -39,4 +39,23 @@ class CurrencyTest extends TestCase
     {
         $this->assertTrue(is_array(Currency::getAllCurrencies()));
     }
+
+    /**
+     * Currency format can be modified.
+     *
+     * @test
+     * @return void
+     */
+    public function it_can_set_currency_format()
+    {
+        $this->currency->setPrecision(3);
+        $this->currency->setThousandSeparator('.');
+        $this->currency->setDecimalSeparator(',');
+        $this->currency->setSymbolPlacement('after');
+
+        $this->assertEquals($this->currency->getPrecision(), 3);
+        $this->assertEquals($this->currency->getThousandSeparator(), '.');
+        $this->assertEquals($this->currency->getDecimalSeparator(), ',');
+        $this->assertEquals($this->currency->getSymbolPlacement(), 'after');
+    }
 }

@@ -1,7 +1,8 @@
 <?php
 
-use PHPUnit\Framework\TestCase;
 use Gerardojbaez\Money\Money;
+use PHPUnit\Framework\TestCase;
+use Gerardojbaez\Money\Currency;
 
 class MoneyTest extends TestCase
 {
@@ -13,10 +14,20 @@ class MoneyTest extends TestCase
      */
     public function it_can_format_amount_to_currency()
     {
-        $amount = new Money(1200.90, 'USD');
+        $amountOne = new Money(1200.90, 'USD');
 
-        $this->assertEquals((string)$amount, '$1,200.90');
-        $this->assertEquals($amount->format(), '$1,200.90');
+        $this->assertEquals((string)$amountOne, '$1,200.90');
+        $this->assertEquals($amountOne->format(), '$1,200.90');
+
+        $currency = new Currency('USD');
+        $currency->setPrecision(3);
+        $currency->setThousandSeparator('.');
+        $currency->setDecimalSeparator(',');
+        $currency->setSymbolPlacement('after');
+        $amountTwo = new Money(1200.90, $currency);
+
+        $this->assertEquals((string)$amountTwo, '1.200,900$');
+        $this->assertEquals($amountTwo->format(), '1.200,900$');
     }
 
     /**

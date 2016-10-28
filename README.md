@@ -20,6 +20,7 @@ moneyFormat(12.99, 'USD'); // RESULT: $12.99
 	- [Currencies Supported](#currencies-supported)
 	- [Formatting Using Helper Function](#formatting-using-helper-function)
 	- [Formatting Using Class](#formatting-using-class)
+    - [Customizing Currency Format](#customizing-currency-format)
 	- [Parse String](#parse-string)
 	- [Get Currency Information](#get-currency-information)
 	- [Get All Supported Currencies](#get-all-supported-currencies)
@@ -82,6 +83,26 @@ echo $money->format(); // RESULT: र10,00,000
 echo $money; // The same as using $money->format()
 
 echo $money->amount(); // RESULT: 10,00,000
+```
+
+### Customizing Currency Format
+
+To use a custom format, create an instance of the `Currency` class with the desired currency and use the setters (se the example below) to apply the desired format. Use this instance with the `Money` class (or the helper) to finally format the number.
+
+For example:
+
+```php
+$currency = new Gerardojbaez\Money\Currency('USD');
+$currency->setPrecision(3);
+$currency->setThousandSeparator('.');
+$currency->setDecimalSeparator(',');
+$currency->setSymbolPlacement('after');
+
+$money = new Gerardojbaez\Money\Money(1200.9, $currency);
+echo $money; // RESULT: 1.200,900$ (example)
+
+// OR
+echo moneyFormat(1200.9, $currency);
 ```
 
 ### Parse String
