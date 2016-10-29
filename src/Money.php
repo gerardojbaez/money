@@ -25,7 +25,7 @@ class Money
      * @param mixed $currency
      * @return void
      */
-    function __construct($amount, $currency = 'USD')
+    public function __construct($amount, $currency = 'USD')
     {
         $this->amount = (float)$amount;
 
