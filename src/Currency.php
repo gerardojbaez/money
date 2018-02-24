@@ -347,11 +347,11 @@ class Currency
         'EUR' => [
             'code' => 'EUR',
             'title' => 'Euro',
-            'symbol' => ' €',
+            'symbol' => '€ ',
             'precision' => 2,
             'thousandSeparator' => '.',
             'decimalSeparator' => ',',
-            'symbolPlacement' => 'after'
+            'symbolPlacement' => 'before'
         ],
         'GHC' => [
             'code' => 'GHC',
