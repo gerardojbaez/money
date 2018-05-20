@@ -87,7 +87,7 @@ echo $money->amount(); // RESULT: 10,00,000
 
 ### Customizing Currency Format
 
-To use a custom format, create an instance of the `Currency` class with the desired currency and use the setters (se the example below) to apply the desired format. Use this instance with the `Money` class (or the helper) to finally format the number.
+To use a custom format, create an instance of the `Currency` class with the desired currency and use the setters (see the example below) to apply the desired format. Use this instance with the `Money` class (or the helper) to finally format the number.
 
 For example:
 
