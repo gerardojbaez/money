@@ -1,5 +1,5 @@
 {
-    "name": "gerardojbaez/money",
+    "name": "VBMart/money",
     "description": "A simple and cross-platform alternative to PHP money_format(). 91 currencies supported, including INR.",
     "keywords": ["money_format", "money", "currency", "formatter"],
     "license": "MIT",
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Gerardojbaez\\Money\\": "src/"
+            "VBMart\\Money\\": "src/"
         },
         "files": ["src/helpers.php"]
     }
