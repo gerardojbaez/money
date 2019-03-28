@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "VBMart\\Money\\": "src/"
+            "Gerardojbaez\\Money\\": "src/"
         },
         "files": ["src/helpers.php"]
     }
