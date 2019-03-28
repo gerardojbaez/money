@@ -707,7 +707,7 @@ class Currency
         'RUB' => [
             'code' => 'RUB',
             'title' => 'Russian Ruble',
-            'symbol' => ' руб',
+            'symbol' => ' ₽',
             'precision' => 2,
             'thousandSeparator' => ' ',
             'decimalSeparator' => ',',
