@@ -1039,6 +1039,16 @@ class Currency
     {
         return self::$currencies;
     }
+    
+    /**
+     * Set currency
+     * 
+     * @return void
+     */
+    public static function setCurrency($code, $currency)
+    {
+        self::$currencies[$code] = $currency;
+    }
 
     /**
      * Get currency.
