@@ -8,7 +8,7 @@ if (! function_exists('moneyFormat')) {
      * @param string Currency
      * @return string
      */
-    function moneyFormat($amount, $currency)
+    function moneyFormat($amount, $currency = 'USD')
     {
         $money = new Gerardojbaez\Money\Money($amount, $currency);
 
