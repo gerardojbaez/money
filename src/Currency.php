@@ -488,6 +488,15 @@ class Currency
             'decimalSeparator' => '.',
             'symbolPlacement' => 'before'
         ],
+        'KZT' => [
+            'code' => 'KZT',
+            'title' => 'Kazakh tenge',
+            'symbol' => '₸',
+            'precision' => 2,
+            'thousandSeparator' => ',',
+            'decimalSeparator' => '.',
+            'symbolPlacement' => 'before'
+        ],
         'LVL' => [
             'code' => 'LVL',
             'title' => 'Latvian Lats',
