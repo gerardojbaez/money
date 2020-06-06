@@ -1,5 +1,5 @@
 {
-    "name": "VBMart/money",
+    "name": "gerardojbaez/money",
     "description": "A simple and cross-platform alternative to PHP money_format(). 91 currencies supported, including INR.",
     "keywords": ["money_format", "money", "currency", "formatter"],
     "license": "MIT",
