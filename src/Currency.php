@@ -74,6 +74,15 @@ class Currency
      * @var array
      */
     private static $currencies = [
+        'NGN' => [
+            'code' => 'NGN',
+            'title' => 'Nigerian Naira',
+            'symbol' => '₦',
+            'precision' => 2,
+            'thousandSeparator' => ',',
+            'decimalSeparator' => '.',
+            'symbolPlacement' => 'before'
+        ],
         'ARS' => [
             'code' => 'ARS',
             'title' => 'Argentine Peso',

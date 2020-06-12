@@ -1,6 +1,6 @@
 # Money
 
-Money is a small PHP library that helps you format numbers to currencies, including INR (Indian Rupee). It's a simple alternative to money_format().
+Money is a small PHP library that helps you format numbers to currencies, including INR (Indian Rupee) and NGN (Nigrian Naira). It's a simple alternative to money_format().
 
 Example:
 
